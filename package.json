@@ -22,7 +22,10 @@
   },
   "homepage": "https://github.com/renzpalo/pokedex#readme",
   "devDependencies": {
+    "autoprefixer": "^9.7.6",
+    "cross-env": "^7.0.2",
     "css-loader": "^3.5.3",
+    "node-sass": "^4.14.1",
     "postcss-loader": "^3.0.0",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.2.1",

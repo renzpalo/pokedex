@@ -5,3 +5,9 @@ $mainColor: #F5F5F5;
 body {
     background-color: $mainColor;
 }
+
+
+// Cards
+.card-title {
+    text-transform: capitalize;
+}

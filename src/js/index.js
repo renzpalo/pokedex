@@ -17,6 +17,8 @@ const controlHome = async () => {
         await state.home.getResults();
 
         homeView.renderResults(state.home.results);
+
+        console.log(state.home);
     } catch(e) {
         console.log(e);
     }

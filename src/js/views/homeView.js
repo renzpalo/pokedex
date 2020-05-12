@@ -1,6 +1,8 @@
 import { elements } from './domElements';
 
 const renderPokemons = pokemon => {
+    console.log('homeView:', pokemon);
+    
     const markup = `<div class="col-sm-3">
                         <div class="card m-1">
                             <img class="card-img-top" src="" alt="Card image cap">
@@ -15,7 +17,12 @@ const renderPokemons = pokemon => {
 }
 
 export const renderResults = pokemons => {
-    pokemons.forEach(el => {
-        renderPokemons(el);
-    });
+    // pokemons.forEach(el => {
+    //     renderPokemons(el);
+    // });
+
+    for(const pokemon of pokemons) {
+        console.log(pokemon);
+        renderPokemons(pokemon);
+    }
 }

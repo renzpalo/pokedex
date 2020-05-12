@@ -12,24 +12,30 @@ export default class Home {
 
             const urls = res.data.results;
 
-            this.getPokemons(urls);
+            this.results = this.getPokemons(urls);
+
+            console.log('this.results', this.results);
         } catch(e) {
-            console.log(error);
+            console.log(e);
         }
     }
 
     async getPokemons(results) {
         if(results) {
             // await doesnt work inside forEach, so use for loop instead.
+            let arrPokemon = [];
             for(const el of results) {
                 try {
                     const res = await axios(el.url);
 
-                    this.results.push(res.data);
+                    if(res) arrPokemon.push(res.data);
                 } catch(e) {
                     console.log(e);
                 }
             }
+            console.log('arrPokemon:', arrPokemon);
+
+            return arrPokemon;
         }
     }
 

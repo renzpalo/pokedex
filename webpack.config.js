@@ -31,7 +31,8 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                loader: 'babel-loader'
+                loader: 'babel-loader',
+                query: { extends: path.join(__dirname, '.babelrc'), retainLines: true }
             }
         ]
     }

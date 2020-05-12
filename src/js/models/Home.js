@@ -12,26 +12,9 @@ export default class Home {
 
             const urls = res.data.results;
 
-            this.getPokemons(urls);
+            this.results = urls;
         } catch(e) {
             console.log(error);
         }
     }
-
-    async getPokemons(results) {
-        if(results) {
-            // await doesnt work inside forEach, so use for loop instead.
-            for(const el of results) {
-                try {
-                    const res = await axios(el.url);
-
-                    this.results.push(res.data);
-                } catch(e) {
-                    console.log(e);
-                }
-            }
-        }
-    }
-
-
 }
